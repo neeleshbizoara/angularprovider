@@ -15,7 +15,8 @@ import { LogService } from '../log.service';
     CommonModule,
     OrdersRoutingModule
   ],
-  providers: [LogService, {provide: API_KEY, useValue: {
+  // providers: [LogService, {provide: API_KEY, useValue: {
+  providers: [{provide: API_KEY, useValue: {
     apiKey: 'ORDER_123456',
     modulename: 'OrderModule'
   }}]

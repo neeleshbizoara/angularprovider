@@ -1,10 +1,10 @@
 import { Inject, Injectable } from '@angular/core';
 import { API_KEY } from './value';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-@Injectable()
+@Injectable({
+  providedIn: 'any'
+})
+// @Injectable()
 export class LogService {
 
   private static count = 0;

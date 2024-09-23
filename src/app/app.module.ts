@@ -34,10 +34,11 @@ import { AppRoutingModule } from './app-routing.module';
   // , RouterOutlet, RouterModule
   // providers: [{provide: LogService, useClass: LogService}],
   providers: [
-    {provide: LogService, useClass: LogService},
+    // {provide: LogService, useClass: LogService},
     // { provide: LogService, useClass: UpdatedLogService },
     // {provide: LogService, useFactory: getLogObject},
-    { provide: UpdatedLogService, useExisting: LogService },
+    // { provide: UpdatedLogService, useExisting: LogService },
+    { provide: UpdatedLogService, useClass: UpdatedLogService },
     {provide : ErrorHandler, useClass: GlobalErrorHandlerService},
     {provide : ErrorHandler, useClass: ErrorHandler},
     {provide: API_KEY, useValue: {
